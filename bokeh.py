@@ -13,7 +13,7 @@ from bokeh.models import ColumnDataSource, Range1d, LabelSet, Label
 
 
 def state():
-    db = MySQLdb.connect("reports-rds.adfdata.net" ,"raviranjan" ,"raviranjan123" ,"decision")
+    db = MySQLdb.connect("reports-rds.adfdata.net" ,"thatirohit" ,"thatirohit123" ,"decision")
     cursor = db.cursor()
     cur = db.cursor(MySQLdb.cursors.DictCursor)
     query = " select  s_name, count(applicationid) app, count(distinct case when applicationid is not null and appstatus like '%approve%' then ApplicationID end)appr \
